@@ -1,38 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
-  <title>Video Saya</title>
+  <meta name="theme-color" content="#183b32">
+  <title>Undangan Pernikahan — Fikriya Ali & Amita Rahma</title>
   <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; background: #111; color: #fff; }
-    body { min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; }
-    main { width: 100%; max-width: 1100px; padding: 16px; text-align: center; }
-    h1 { font-size: clamp(1.1rem, 3vw, 1.7rem); font-weight: 600; margin: 0 0 14px; }
-    video { display: block; width: 100%; max-height: 82vh; background: #000; border-radius: 10px; object-fit: contain; }
-    p { color: #ccc; font-size: 0.9rem; line-height: 1.5; margin: 12px 0 0; }
-    @media (max-width: 600px) {
-      main { padding: 10px; }
-      video { max-height: 84vh; border-radius: 6px; }
-    }
+    :root{--green:#183b32;--gold:#c7a66a;--cream:#fbf7ef;--ink:#26332d}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+    .hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px 18px;background:radial-gradient(ellipse at top,#fffdf8 0%,#f4ead8 75%,#eadcc2 100%);position:relative;overflow:hidden}
+    .hero:before,.hero:after{content:"✦";position:absolute;color:#c7a66a55;font-size:130px}
+    .hero:before{top:3%;left:4%}.hero:after{bottom:3%;right:4%}
+    .frame{max-width:650px;width:100%;border:1px solid #c7a66a;padding:42px 22px;position:relative;background:#fffdf8cc;box-shadow:0 18px 55px #4b392012}
+    .eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:4px;font-size:11px;color:#8a7043}
+    h1{font-weight:normal;font-size:clamp(34px,8vw,58px);line-height:1.15;color:var(--green);margin:22px 0}
+    .amp{color:var(--gold);font-style:italic}
+    .date{font-family:Arial,sans-serif;letter-spacing:1.5px;font-size:14px}
+    .btn{display:inline-block;border:0;border-radius:30px;background:var(--green);color:#fff;text-decoration:none;padding:13px 22px;font:600 13px Arial,sans-serif;letter-spacing:.5px;cursor:pointer;margin-top:22px}
+    .btn.gold{background:var(--gold);color:#1d2b25}
+    main{max-width:760px;margin:auto;padding:22px 16px 55px}
+    section{padding:30px 0;text-align:center}
+    h2{font-size:27px;font-weight:normal;color:var(--green);margin:0 0 15px}
+    .divider{color:var(--gold);letter-spacing:8px;margin:10px 0 20px}
+    p{line-height:1.8;margin:8px 0;font-size:16px}
+    .card{background:#fffdf8;border:1px solid #e6d6b7;padding:24px 18px;border-radius:14px;box-shadow:0 8px 28px #3e30200a}
+    .video-wrap{overflow:hidden;border-radius:14px;background:#101010;box-shadow:0 12px 32px #18251e20}
+    video{display:block;width:100%;max-height:75vh;background:#111}
+    .small{font:12px/1.7 Arial,sans-serif;color:#68736d}
+    .detail{font-family:Arial,sans-serif;font-size:14px;line-height:1.9}
+    .name{font-size:21px;color:var(--green)}
+    .footer{text-align:center;padding:25px 15px 35px;background:var(--green);color:#f9f1e2;font-size:13px}
+    .footer strong{color:#e3c68d}
+    .copymsg{font:12px Arial,sans-serif;min-height:16px;color:#3d6d4f;margin-top:8px}
+    @media(max-width:420px){.frame{padding:34px 15px}.hero:before,.hero:after{font-size:90px}.card{padding:20px 13px}}
   </style>
 </head>
 <body>
+  <header class="hero" id="home">
+    <div class="frame">
+      <div class="eyebrow">Undangan Pernikahan</div>
+      <h1>Fikriya Ali<br><span class="amp">&amp;</span><br>Amita Rahma</h1>
+      <div class="divider">✦ ❧ ✦</div>
+      <p>Dengan memohon rahmat dan ridho Allah SWT,<br>kami mengundang Anda untuk hadir di hari bahagia kami.</p>
+      <p class="date">RABU, 28 OKTOBER 2026</p>
+      <a class="btn" href="#video">BUKA UNDANGAN</a>
+    </div>
+  </header>
+
   <main>
-    <h1>Video Saya</h1>
-    <video id="myVideo" controls autoplay muted playsinline preload="metadata">
-      <source src="video.mp4" type="video/mp4">
-      Browser Anda belum mendukung pemutaran video.
-    </video>
-    <p>Video diputar otomatis tanpa suara karena pembatasan browser. Tekan tombol suara untuk mendengarkan audio.</p>
+    <section id="video">
+      <h2>Video Undangan</h2>
+      <div class="divider">✦ ❧ ✦</div>
+      <div class="video-wrap">
+        <video controls playsinline preload="metadata" poster="">
+          <source src="video-undangan.mp4" type="video/mp4">
+          Browser Anda belum mendukung pemutar video.
+        </video>
+      </div>
+      <p class="small">Tekan tombol putar pada video untuk menonton dan mendengarkan audionya.</p>
+    </section>
+
+    <section id="acara">
+      <h2>Waktu &amp; Tempat</h2>
+      <div class="divider">✦ ❧ ✦</div>
+      <div class="card">
+        <p class="name">Akad Nikah</p>
+        <p class="detail">Rabu, 28 Oktober 2026<br>Pukul 09.00 WIB</p>
+        <div class="divider">❧</div>
+        <p class="name">Resepsi</p>
+        <p class="detail">Pukul 16.00 WIB — selesai</p>
+        <div class="divider">❧</div>
+        <p class="detail">Rumah Ibu Sri<br>Desa Kp. Kr. Malang, RT 1, Kecamatan Kapongan,<br>Situbondo</p>
+        <a class="btn" href="https://maps.app.goo.gl/sZ3AgJxDKsnUf6PQ8" target="_blank" rel="noopener">BUKA GOOGLE MAPS</a>
+      </div>
+    </section>
+
+    <section id="hadiah">
+      <h2>Hadiah Pernikahan</h2>
+      <div class="divider">✦ ❧ ✦</div>
+      <div class="card">
+        <p>Doa restu Anda merupakan hadiah terindah bagi kami. Jika ingin mengirimkan tanda kasih, dapat melalui DANA:</p>
+        <p class="name">DANA</p>
+        <p class="detail">Amita Rahma<br><strong id="dana">085730213117</strong></p>
+        <button class="btn gold" onclick="copyDana()">SALIN NOMOR DANA</button>
+        <div id="copymsg" class="copymsg" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <h2>Konfirmasi Kehadiran</h2>
+      <div class="divider">✦ ❧ ✦</div>
+      <div class="card">
+        <p>Silakan konfirmasi kehadiran melalui WhatsApp.</p>
+        <a class="btn" id="rsvpBtn" href="https://wa.me/6285730213117?text=Assalamu%27alaikum%2C%20saya%20ingin%20konfirmasi%20kehadiran%20untuk%20pernikahan%20Fikriya%20Ali%20%26%20Amita%20Rahma%20pada%2028%20Oktober%202026." target="_blank" rel="noopener">KONFIRMASI VIA WHATSAPP</a>
+      </div>
+    </section>
+
+    <section>
+      <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+      <p class="name">Fikriya Ali <span class="amp">&amp;</span> Amita Rahma</p>
+    </section>
   </main>
+  <footer class="footer">Terima kasih atas doa dan restunya.<br><strong>Fikriya Ali &amp; Amita Rahma</strong></footer>
+
   <script>
-    const video = document.getElementById('myVideo');
-    video.play().catch(() => {
-      // Jika autoplay diblokir oleh browser, pengunjung dapat menekan tombol Play.
-    });
+    function copyDana(){
+      const number = document.getElementById('dana').textContent.trim();
+      const msg = document.getElementById('copymsg');
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(number).then(()=>msg.textContent='Nomor DANA berhasil disalin.').catch(()=>fallbackCopy(number,msg));
+      } else { fallbackCopy(number,msg); }
+    }
+    function fallbackCopy(text,msg){
+      const input=document.createElement('textarea');input.value=text;input.style.position='fixed';input.style.opacity='0';
+      document.body.appendChild(input);input.select();
+      try{document.execCommand('copy');msg.textContent='Nomor DANA berhasil disalin.';}catch(e){msg.textContent='Silakan salin nomor: '+text;}
+      input.remove();
+    }
   </script>
 </body>
 </html>
