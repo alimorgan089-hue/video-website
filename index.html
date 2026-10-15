@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Video Saya</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #111; color: #fff; }
+    body { min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; }
+    main { width: 100%; max-width: 1100px; padding: 16px; text-align: center; }
+    h1 { font-size: clamp(1.1rem, 3vw, 1.7rem); font-weight: 600; margin: 0 0 14px; }
+    video { display: block; width: 100%; max-height: 82vh; background: #000; border-radius: 10px; object-fit: contain; }
+    p { color: #ccc; font-size: 0.9rem; line-height: 1.5; margin: 12px 0 0; }
+    @media (max-width: 600px) {
+      main { padding: 10px; }
+      video { max-height: 84vh; border-radius: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Video Saya</h1>
+    <video id="myVideo" controls autoplay muted playsinline preload="metadata">
+      <source src="video.mp4" type="video/mp4">
+      Browser Anda belum mendukung pemutaran video.
+    </video>
+    <p>Video diputar otomatis tanpa suara karena pembatasan browser. Tekan tombol suara untuk mendengarkan audio.</p>
+  </main>
+  <script>
+    const video = document.getElementById('myVideo');
+    video.play().catch(() => {
+      // Jika autoplay diblokir oleh browser, pengunjung dapat menekan tombol Play.
+    });
+  </script>
+</body>
+</html>
